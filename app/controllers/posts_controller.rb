@@ -24,7 +24,6 @@ class PostsController < ApplicationController
     
     def update
         @post = Post.find(params[:id])
-        @post.update(update_at: DateTime.now)
         if @post.update(post_param)
             redirect_to @post
         else
